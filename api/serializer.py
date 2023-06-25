@@ -1,3 +1,12 @@
 from rest_framework import serializers
+from .models import Company
 
-# Cretae serilaizer here
+# Create serializers here
+class CompanySerializer(serializers.HyperlinkedModelSerializer()):
+    class Meta:
+        model: Company
+        fields: "__all__"
+
+
+
+
